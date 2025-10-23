@@ -1,0 +1,25 @@
+Detected: 2025-10-23T11:29:52.789043
+
+Original email:
+From: promotions@freeprizes.example.com
+To: te@example.com
+Subject: 🎉 CONGRATULATIONS! You have won a FREE iPhone! 🎉
+
+Hello,
+
+CONGRATULATIONS! You have been randomly selected as the winner of our monthly giveaway.
+You are eligible to receive a brand new iPhone 14 Pro + free shipping.
+
+To claim your prize, please click the link below and fill in your name and delivery address:
+http://free-prize.example.com/claim?id=ABC123
+
+This offer is valid for 24 hours only. Failure to claim within this time will void your prize.
+
+Please provide your full name, postal address and phone number on the claim form so we can ship your prize.
+
+Best regards,
+Free Prizes Team
+support@freeprizes.example.com
+
+Cleaned text:
+promotionsfreeprizesexamplecom teexamplecom subject 🎉 congratulations free iphone 🎉 hello congratulations randomly selected winner monthly giveaway eligible receive brand new iphone 14 pro free shipping claim prize please click link fill name delivery address httpfreeprizeexamplecomclaimidabc123 offer valid 24 hours failure claim within time void prize please provide full name postal address phone number claim form ship prize best regards free prizes team supportfreeprizesexamplecom

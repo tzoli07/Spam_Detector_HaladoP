@@ -1,0 +1,8 @@
+Detected: 2025-10-23T11:29:38.060111
+
+Original email:
+Claim your free vacation now! Only a few spots left!
+
+
+Cleaned text:
+claim free vacation spots left
