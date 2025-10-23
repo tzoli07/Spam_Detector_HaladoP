@@ -61,8 +61,8 @@ y_pred = model.predict(X_test_vec)
 
 # --- 8. Eredmények ---
 acc = round(accuracy_score(y_test, y_pred) * 100, 2)
-print(f"\n✅ Modell pontossága: {acc}%\n")
-print("📊 Klasszifikációs riport:")
+print(f"\n Modell pontossága: {acc}%\n")
+print(" Klasszifikációs riport:")
 print(classification_report(y_test, y_pred))
 
 # --- 9. Konfúziós mátrix ---
@@ -87,21 +87,21 @@ if not os.path.exists(spam_folder):
     os.makedirs(spam_folder)
 
 while True:
-    user_input = input("📨 Adj meg 'file:<fájlnév>' vagy kezd el beírni/illesszed a levelet (vagy 'exit'): ").strip()
+    user_input = input(" Adj meg 'file:<fájlnév>' vagy kezd el beírni/illesszed a levelet (vagy 'exit'): ").strip()
 
     if user_input.lower() == "exit":
-        print("👋 Kilépés...")
+        print(" Kilépés...")
         break
 
     # 1) fájl esetén
     if user_input.lower().startswith("file:"):
         filepath = user_input.split("file:", 1)[1].strip()
         if not os.path.exists(filepath):
-            print("❌ A megadott fájl nem található:", filepath)
+            print(" A megadott fájl nem található:", filepath)
             continue
         with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
             email_text = f.read()
-        print(f"📂 Beolvasva: {filepath}")
+        print(f" Beolvasva: {filepath}")
 
     # 2) ha üres sort adott meg, kérjük be többsoros inputként
     elif user_input == "":
@@ -142,7 +142,7 @@ while True:
     pred = model.predict(vec)[0]
 
     if pred == 1:
-        print("⚠️ Ez az e-mail: 📩 SPAM")
+        print("Ez az e-mail: 📩 SPAM")
         timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         safe_name = f"spam_{timestamp}.txt"
         filepath = os.path.join(spam_folder, safe_name)
@@ -154,4 +154,4 @@ while True:
             f.write(cleaned + "\n")
         print(f"📁 A spam e-mail elmentve ide: {filepath}")
     else:
-        print("✅ Ez az e-mail: NEM SPAM")
+        print("Ez az e-mail: NEM SPAM")
