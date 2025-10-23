@@ -35,7 +35,7 @@ def clean_text(text):
     words = [w for w in words if w not in sw]
     return ' '.join(words)
 
-print("🧹 Szövegek tisztítása...")
+print(" Szövegek tisztítása...")
 df['cleaned'] = df['message'].apply(clean_text)
 
 # --- 3. Címkék numerikus konvertálása ---
@@ -52,7 +52,7 @@ X_train_vec = vectorizer.fit_transform(X_train)
 X_test_vec = vectorizer.transform(X_test)
 
 # --- 6. Modell tanítása ---
-print("🤖 Modell tanítása...")
+print(" Modell tanítása...")
 model = MultinomialNB()
 model.fit(X_train_vec, y_train)
 
@@ -142,7 +142,7 @@ while True:
     pred = model.predict(vec)[0]
 
     if pred == 1:
-        print("Ez az e-mail: 📩 SPAM")
+        print("Ez az e-mail:  SPAM")
         timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         safe_name = f"spam_{timestamp}.txt"
         filepath = os.path.join(spam_folder, safe_name)
@@ -152,6 +152,6 @@ while True:
             f.write(email_text + "\n\n")
             f.write("Cleaned text:\n")
             f.write(cleaned + "\n")
-        print(f"📁 A spam e-mail elmentve ide: {filepath}")
+        print(f" A spam e-mail elmentve ide: {filepath}")
     else:
         print("Ez az e-mail: NEM SPAM")
