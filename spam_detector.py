@@ -10,16 +10,16 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-# --- Első futáskor lekell tölteni a stopword listát
+#  Első futáskor lekell tölteni a stopword listát
 nltk.download('stopwords', quiet=True)
 from nltk.corpus import stopwords
 
-# --- 1. Spam Adatok betöltése 
+# Spam Adatok betöltése 
 print("Adatok betöltése...")
 url = "https://raw.githubusercontent.com/justmarkham/pycon-2016-tutorial/master/data/sms.tsv"
 df = pd.read_csv(url, sep='\t', header=None, names=['label', 'message'])
 
-# --- 2. Adattisztítás
+# Adattisztítás
 def clean_text(text):
     if not isinstance(text, str):
         text = str(text)
@@ -75,7 +75,7 @@ plt.colorbar()
 plt.show()
 
 #Emaillel üzenettel tesztelés
-print("\n--- Saját e-mail tesztelése ---")
+print("\n Email tesztelése ")
 print("Használat:")
 print(" - Fájl beolvasása: file:<fájlnév> (pl. file:email1.txt)")
 print(" - Többsoros beillesztés / gépelés: majd egy új sorban kell egy '.' majd nyomj ENTER-t")
